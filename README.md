@@ -16,11 +16,16 @@ Two ensemble models compared:
 2. XGBoost (Gradient Boosting) - Sequential trees with L1/L2 regularization
 
 ## Key Results
-| Metric | Random Forest | XGBoost |
-|--------|--------------|---------|
-| Recall | 0.337 | **0.416** |
-| ROC-AUC | 0.799 | 0.797 |
-| F1-Score | 0.432 | **0.505** |
 
-Final Model: XGBoost (selected for superior recall)
+Cross-validation performance (5-fold):
+
+| Metric | Random Forest | XGBoost | Best |
+|--------|--------------|---------|------|
+| Accuracy | 0.862 | **0.870** | XGBoost |
+| Precision | 0.642 | **0.656** | XGBoost |
+| Recall | 0.337 | **0.416** | XGBoost |
+| F1-Score | 0.432 | **0.505** | XGBoost |
+| ROC-AUC | **0.799** | 0.797 | Random Forest |
+
+Final Model: XGBoost (selected for superior recall — critical for identifying at-risk employees)
 
